@@ -25,10 +25,11 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
     "dev": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production"
   },
+  "proxy": "http://localhost:5000/",
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mjwwit/scrum-poker.git"
