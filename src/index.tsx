@@ -1,7 +1,9 @@
 import * as React from 'react'
-import { render } from 'react-dom'
+import * as ReactDOM from 'react-dom';
 
-render(
-  <h1>Dit is wel je eigen app =D</h1>,
+import {App} from './app'
+
+ReactDOM.render(
+  <App />,
   document.getElementById('root')
 )
