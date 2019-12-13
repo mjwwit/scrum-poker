@@ -1,14 +1,19 @@
+const webpackModule = require('webpack')
 const webpack = {
-    entry: './src/component/index.tsx',
-    output: {
-        filename: 'target/bundle.js',
+    devServer:{
+        contentBase: '.',
+        hot:true,
     },
     devtool: 'source-map',
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.json'],
     },
+
+    plugins: [
+        new webpackModule.HotModuleReplacementPlugin()
+    ],
     module: {
-        loaders: [
+        rules: [
             {
                 test: /.tsx?$/,
                 loader: 'awesome-typescript-loader',
@@ -19,7 +24,11 @@ const webpack = {
                 enforce: 'pre',
             }
         ]
-    }
+    },
+      externals: {
+      "react": "React",
+      "react-dom": "ReactDOM"
+  }
 };
 
 module.exports = webpack;
