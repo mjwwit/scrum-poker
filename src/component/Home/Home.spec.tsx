@@ -6,7 +6,7 @@ import Home from './Home';
 describe('render home page', () => {
     it('should show a title', () => {
        const title = shallow(<Home/>)
-       expect(title.contains(<h1>Welcome!!</h1>)).toBeTruthy()
+       expect(title.contains(<h1>Welcome to the scrum poker app!</h1>)).toBeTruthy()
     });
     it('should show a button', () => {
         const button = shallow(<Home/>)

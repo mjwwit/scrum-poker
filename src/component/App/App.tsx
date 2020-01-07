@@ -1,18 +1,15 @@
 import * as React from 'react'
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import { Router, Link } from "@reach/router";
 import Home from '../Home/Home';
+import Room from '../Room/Room';
 
 
 const App = () => {
     return (
+
             <Router>
-                <Switch>
-                <Route path="/">
-                
-                    <Home/>
-                    
-                </Route>
-                </Switch>
+                <Home path="/" />
+                <Room path="/room" />
             </Router>
   )
 
