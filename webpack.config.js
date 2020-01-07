@@ -1,13 +1,35 @@
-module.exports = {
-  mode: "production",
+const webpackModule = require('webpack')
+const webpack = {
+    devServer:{
+        contentBase: '.',
+        hot:true,
+    },
+    devtool: 'source-map',
+    resolve: {
+        extensions: ['.ts', '.tsx', '.js', '.json'],
+    },
 
-  // Enable sourcemaps for debugging webpack's output.
-  devtool: "source-map",
-
-  resolve: {
-      // Add '.ts' and '.tsx' as resolvable extensions.
-      extensions: [".ts", ".tsx", ".js" ]
-  },
+    plugins: [
+        new webpackModule.HotModuleReplacementPlugin()
+    ],
+    module: {
+        rules: [
+            {
+                test: /.tsx?$/,
+                loader: 'awesome-typescript-loader',
+                exclude: /node_modules/,
+            }, {
+                test: /.js$/,
+                loader: 'source-map-loader',
+                enforce: 'pre',
+            }
+        ]
+    },
+      externals: {
+      "react": "React",
+      "react-dom": "ReactDOM"
+  }
+};
 
   module: {
       rules: [
