@@ -1,5 +1,7 @@
 import * as React from 'react'
-import * as ReactDOM from 'react-dom';
-import App from './component/App';
+import { render } from 'react-dom'
 
-ReactDOM.render(<App/>, document.getElementById('root'))
+render(
+  <h1>Dit is wel je eigen app =D</h1>,
+  document.getElementById('root')
+)

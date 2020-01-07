@@ -1,49 +1,44 @@
 {
-  "name": "scrum-poker2",
+  "name": "scrum-poker",
   "version": "1.0.0",
   "description": "",
-  "main": "jest.config.js",
-  "directories": {
-    "test": "test"
-  },
+  "main": "index.html",
   "dependencies": {
-    "awesome-typescript-loader": "^5.2.1",
-    "@types/react": "^16.9.16",
-    "@types/react-dom": "^16.9.4",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "source-map-loader": "^0.2.4",
-    "typescript": "^3.7.3",
-    "webpack": "^4.41.2"
+    "@types/react": "^16.8.23",
+    "@types/react-dom": "^16.8.5",
+    "babel-cli": "^6.26.0",
+    "file-loader": "^4.1.0",
+    "react-scripts": "^3.0.1",
+    "strip": "^3.0.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.38.0",
+    "webpack-cli": "^3.3.6"
   },
   "devDependencies": {
-    "@types/enzyme": "^3.10.4",
-    "@types/jest": "^24.0.23",
-    "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.15.1",
-    "jest": "^24.9.0",
-    "react-test-renderer": "^16.12.0"
-  },
-  "jest": {
-    "setupFiles": [
-      "<rootDir>/test-setup.js"
-    ],
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js"
-    ],
-    "transform": {
-      "^.+\\.(ts|tsx)$": "<rootDir>/test-preprocessor.js"
-    },
-    "testMatch": [
-      "**/test/*.(ts|tsx|js)"
-    ]
+    "css-loader": "^3.1.0",
+    "html-loader": "^0.5.5",
+    "mini-css-extract-plugin": "^0.8.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "source-map-loader": "^0.2.4",
+    "ts-loader": "^6.0.4",
+    "typescript": "^3.5.3",
+    "webpack-dev-server": "^3.7.2"
   },
   "scripts": {
-    "test": "jest"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --mode development --open",
+    "build": "webpack --mode development --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjwwit/scrum-poker.git"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mjwwit/scrum-poker/issues"
+  },
+  "homepage": "https://github.com/mjwwit/scrum-poker#readme"
 }
